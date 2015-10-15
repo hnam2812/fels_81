@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20151019043039) do
     t.integer  "word_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
