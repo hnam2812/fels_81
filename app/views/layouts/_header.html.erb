@@ -6,7 +6,7 @@
         <li><%= link_to t(".home"), root_path %></li>
         <li><%= link_to t(".help"), help_path %></li>
         <li><%= link_to t(".all_users"), "#" %></li>
-        <% if false %>
+        <% if logged_in? %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= t ".account" %> <b class="caret"></b>
@@ -16,12 +16,12 @@
               <li><%= link_to t(".setting"), "#" %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to t(".log_out"), "#" %>
+                <%= link_to t(".log_out"), logout_path, method: "delete" %>
               </li>
             </ul>
           </li>
         <% else %>
-          <li><%= link_to t(".log_in"), "#" %></li>
+          <li><%= link_to t(".log_in"), login_path %></li>
         <% end %>
       </ul>
     </nav>
