@@ -1,4 +1,8 @@
 en:
+  password_confirmation: "Confirm password"
+  signup: "Create my account"
+  signup_success: "You have created account successful!"
+
   layouts: 
     header:
       website: "Framgia eLearning"
