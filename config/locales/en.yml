@@ -2,7 +2,12 @@ en:
   password_confirmation: "Confirm password"
   signup: "Create my account"
   signup_success: "You have created account successful!"
-
+  error_login: "Invalid email/password, try again!"
+  log_in: "Log in"
+  user_all: "All users"
+  sign_up_now: "Sign up now!"
+  remember_me: "Remember me?"
+  new_user: "New user?"
   layouts: 
     header:
       website: "Framgia eLearning"

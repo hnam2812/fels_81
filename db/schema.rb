@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019043039) do
+ActiveRecord::Schema.define(version: 20151020015213) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151019043039) do
     t.integer  "word_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -78,6 +79,7 @@ ActiveRecord::Schema.define(version: 20151019043039) do
     t.boolean  "admin",           default: false
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.string   "remember_digest"
   end
 
   create_table "words", force: :cascade do |t|
