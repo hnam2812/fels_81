@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @users = User.paginate page: params[:page]
+  end
+
   def new
     @user = User.new
   end
@@ -11,6 +15,10 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @user = User.find_by id: params[:id]
   end
 
   private
