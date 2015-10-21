@@ -29,6 +29,12 @@ en:
     home:
       welcome: "Welcome"
       sign_up: "Sign up"
+      promotion: "Please login to learn and follow my account."
+      create_account_free: "to create account for free!"
+      or: "Or"
+      btn:
+        lesson: "Lessons"
+        word: "Words"
   project: "Framgia E-learning System"
   users:
     edit:
@@ -46,3 +52,11 @@ en:
       delete:
         success: "User deleted!"
         fail: "User haven't been deleted yet!"
+  category:
+    index:
+      header: "All categories"
+      start: "Start"
+      word_learned_title: "You've learnt "
+      word: "word"
+    show:
+      words: "List words"

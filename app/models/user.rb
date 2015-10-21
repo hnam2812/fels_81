@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
     self.activation_token  = User.new_token
     self.activation_digest = User.digest activation_token
   end
-    
+
   def downcase_email
     self.email = email.downcase
   end

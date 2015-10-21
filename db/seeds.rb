@@ -19,3 +19,16 @@ User.create!(name: "Nguyen Hoang Nam",
     password: password,
     password_confirmation: password)
 end
+
+20.times do |n|
+  name = Faker::Name.title
+  Category.create!(name: name)
+end
+
+categories = Category.order(:created_at).take(5)
+
+categories.each do |category| 
+  100.times do |n|
+    category.words.create! content: Faker::Lorem.word
+  end
+end
