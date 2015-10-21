@@ -7,7 +7,8 @@ en:
   user_all: "All users"
   sign_up_now: "Sign up now!"
   remember_me: "Remember me?"
-  new_user: "New user?"
+  new_user: "New user?"     
+  save_changes: "Save changes"
   layouts: 
     header:
       website: "Framgia eLearning"
@@ -15,8 +16,7 @@ en:
       help: "Help"
       log_in: "Log in"
       log_out: "Log out"
-      setting: "Setting"
-      all_users: "All users"      
+      setting: "Setting"      
       profile: "Profile"
       account: "Account"
       title: "Fels"
@@ -30,3 +30,19 @@ en:
       welcome: "Welcome"
       sign_up: "Sign up"
   project: "Framgia E-learning System"
+  users:
+    edit:
+      update_profile: "Update profile"
+      require_log_in: "You must login"  
+    user:
+      confirm: "Are you sure?"
+      delete: "Delete"      
+    index:
+        user_all: "All users"      
+  flash:
+    user:
+      update:
+        success: "Update profile successfully!"
+      delete:
+        success: "User deleted!"
+        fail: "User haven't been deleted yet!"
