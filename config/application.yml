@@ -1,0 +1,12 @@
+defaults: &defaults
+  pagination:
+    categories_per_page: 10
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
