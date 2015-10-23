@@ -1,0 +1,28 @@
+<% provide :title, t("word_list_title") %>
+<div class="row">
+  <div class="col-md-offset-3 col-md-7">
+    <div class="row">
+      <h5><%= t "word.category_title" %></h5>
+      <%= form_for words_path, method: :get do |f| %>
+        <%= select_tag :category_id,
+          options_from_collection_for_select(@categories, :id, :name,
+            params[:category_id]),
+          include_blank: t("word.all"), class: "col-md-3" %>
+        <% Settings.option.each do |word_option| %>
+          <div class="col-md-2">
+            <%= radio_button_tag :option, word_option,
+              (checked = true if params[:option] == word_option),
+              class: "radio_word" %>
+            <%= t "word.option.#{word_option}" %>
+          </div>
+        <% end %>
+        <%= f.submit t("filter"),
+          class: "btn btn-primary form-control" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <%= render @words %>
+</div>
+<%= will_paginate %>

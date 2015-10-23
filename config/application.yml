@@ -1,6 +1,11 @@
 defaults: &defaults
+  option:
+    - all
+    - learned
+    - not_learn
   pagination:
     categories_per_page: 10
+    words_per_page: 120
 
 development:
   <<: *defaults

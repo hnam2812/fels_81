@@ -10,8 +10,10 @@
       </section>
     </aside>
     <div class="btn-group btn-group-justified" role="group" saria-label="">
-      <%= link_to t("static_pages.home.btn.word"), "#", class: "btn btn-default" %>
-      <%= link_to t("static_pages.home.btn.lesson"), categories_path, class: "btn btn-default" %>
+      <%= link_to t("static_pages.home.btn.word"), words_path,
+        class: "btn btn-default" %>
+      <%= link_to t("static_pages.home.btn.lesson"), categories_path,
+        class: "btn btn-default" %>
     </div>
   </div>
 <% else %>
@@ -20,7 +22,8 @@
     <h2>
       <%= t "static_pages.home.promotion" %>
       <br> <br>
-      <%= t "static_pages.home.or" %> <%= link_to t(".sign_up"), new_user_path %>
+      <%= t "static_pages.home.or" %>
+      <%= link_to t(".sign_up"), new_user_path %>
       <%= t "static_pages.home.create_account_free" %>
     </h2>
   </div>

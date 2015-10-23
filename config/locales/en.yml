@@ -7,16 +7,18 @@ en:
   user_all: "All users"
   sign_up_now: "Sign up now!"
   remember_me: "Remember me?"
-  new_user: "New user?"     
+  new_user: "New user?"
   save_changes: "Save changes"
-  layouts: 
+  filter: "Filter"
+  word_list_title: "Word List"
+  layouts:
     header:
       website: "Framgia eLearning"
       home: "Home"
       help: "Help"
       log_in: "Log in"
       log_out: "Log out"
-      setting: "Setting"      
+      setting: "Setting"
       profile: "Profile"
       account: "Account"
       title: "Fels"
@@ -39,12 +41,12 @@ en:
   users:
     edit:
       update_profile: "Update profile"
-      require_log_in: "You must login"  
+      require_log_in: "You must login"
     user:
       confirm: "Are you sure?"
-      delete: "Delete"      
+      delete: "Delete"
     index:
-        user_all: "All users"      
+        user_all: "All users"
   flash:
     user:
       update:
@@ -60,3 +62,10 @@ en:
       word: "word"
     show:
       words: "List words"
+  word:
+    all: "All words"
+    category_title: "Category"
+    option:
+      learned: "Learned"
+      not_learn: "Not learn"
+      all: "all"

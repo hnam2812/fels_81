@@ -333,7 +333,7 @@ div.homepage {
     h3 {
       display: inline;
       width: 100%;
-      span {      
+      span {
         a {
           color: #f0f0f0;
         }
@@ -342,6 +342,11 @@ div.homepage {
   }
 
   h3 {
-    
+
   }
+}
+
+/* Word */
+input[type=radio].radio_word {
+  width: inherit;
 }
