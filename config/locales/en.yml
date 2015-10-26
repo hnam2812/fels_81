@@ -12,6 +12,14 @@ en:
   filter: "Filter"
   word_list_title: "Word List"
   layouts:
+  save_changes: "Save changes"
+  follow: "Follow"
+  unfollow: "Unfollow"
+  following: "following"
+  follower: "followers"
+  view_profile: "view my profile"
+  login_require: "Please log in."
+  layouts:
     header:
       website: "Framgia eLearning"
       home: "Home"

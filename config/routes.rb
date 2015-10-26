@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
   resources :categories
-  resources :users
   resources :words
+  resources :users do
+    resources :relationships,  only: [:index]
+  end
+  resources :relationships, only: [:create, :destroy]
 end
