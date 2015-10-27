@@ -1,0 +1,7 @@
+<h1> <%= t "learned_lesson" %> </h1>
+<% if @user.lessons.any? %>
+  <% @user.lessons.each do |lesson| %>
+    <br>
+    <%= link_to "#{t("lesson")} #{lesson.id}", lesson %>
+  <% end %>
+<% end %>

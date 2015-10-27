@@ -14,4 +14,7 @@
   <div class="col-md-8">
     <%= render "follow_form" if logged_in? %>
   </div>
+  <div class="col-md-6">
+    <%= render "lesson_solved" if current_user? @user %>
+  </div>
 </div>

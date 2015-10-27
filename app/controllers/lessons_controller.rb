@@ -20,7 +20,6 @@ class LessonsController < ApplicationController
       flash[:danger] = t "update_lesson_fail"
     end
     redirect_to @lesson
-
   end
 
   def show

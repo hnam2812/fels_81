@@ -1,6 +1,5 @@
 <h1><%= t "lesson" %></h1>
 <%= t "category_name" %>:
 <%= link_to @lesson.category.name, @lesson.category %>
-<%= t "has" %>: <%= pluralize @lesson.words.count, t("category.index.word") %>
 <br>
 <%= render @lesson.solved ? "lesson_result" : "exam" %>

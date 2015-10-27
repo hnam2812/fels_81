@@ -24,7 +24,7 @@ en:
   start: "Start!"
   submit: "Submit!"
   category_name: "Category"
-  has: "Has"
+  has: "has"
   result_word: "Word"
   category_learned: "You've finished this category"
   update_lesson_complete: "You've finished lesson"
@@ -34,6 +34,9 @@ en:
   wrong_answer: "(Incorrect answer)"
   your_answer: "Your answer"
   member: "Member"
+  lesson: "Lesson"
+  learned_lesson: "Learned Lesson"
+  your_correct_answer: "Your correct answer"
   layouts:
     header:
       website: "Framgia eLearning"

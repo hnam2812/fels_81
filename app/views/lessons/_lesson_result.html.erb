@@ -1,5 +1,9 @@
 <%= t "member" %>: <%= link_to @lesson.user.name, @lesson.user %>,
 <%= t "lesson" %>: <%= link_to @lesson.id, @lesson  %>
+<%= t "has" %>: <%= pluralize @lesson.words.count, t("category.index.word") %>
+<br>
+<%= t "your_correct_answer"  %>:
+<%= @lesson.words_correct %>
 <p>
   <% @lesson.results.each do |result| %>
   <li>
