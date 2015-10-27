@@ -1,6 +1,7 @@
 defaults: &defaults
+  all_words: "all_words"
   option:
-    - all
+    - all_words
     - learned
     - not_learn
   pagination:
