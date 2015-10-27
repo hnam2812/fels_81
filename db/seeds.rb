@@ -20,7 +20,7 @@ User.create!(name: "Nguyen Hoang Nam",
     password_confirmation: password)
 end
 
-20.times do |n|
+5.times do |n|
   name = Faker::Name.title
   description = Faker::Lorem.paragraphs(5).join("-")
   Category.create!(name: name)
@@ -29,12 +29,12 @@ end
 categories = Category.order(:created_at).take(5)
 
 categories.each do |category|
-  100.times do |_|
+  50.times do |_|
     category.words.create! content: Faker::Lorem.word
   end
 end
 
-words = Word.take(5)
+words = Word.all
 
 words.each do |word|
   4.times do |n|

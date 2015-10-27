@@ -12,6 +12,17 @@ class LessonsController < ApplicationController
     end
   end
 
+  def update
+    @lesson = Lesson.find_by id: params[:id]
+    if @lesson.update_attributes lesson_params
+      flash[:success] = t "update_lesson_complete"
+    else
+      flash[:danger] = t "update_lesson_fail"
+    end
+    redirect_to @lesson
+
+  end
+
   def show
     @lesson = Lesson.find_by id: params[:id]
     if @lesson.words.count == 0
@@ -22,7 +33,6 @@ class LessonsController < ApplicationController
 
   private
   def lesson_params
-    params.require(:lesson).permit :category_id
+    params.require(:lesson).permit :category_id, :solved, results_attributes: [:id, :answer_id]
   end
-
 end
