@@ -71,9 +71,9 @@ en:
     show:
       words: "List words"
   word:
-    all: "All words"
+    all_words: "All words"
     category_title: "Category"
     option:
       learned: "Learned"
       not_learn: "Not learn"
-      all: "all"
+      all_words: "All word"

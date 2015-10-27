@@ -1,4 +1,4 @@
-User.create!(name: "Tang Hoai Duy", 
+User.create!(name: "Tang Hoai Duy",
   email: "duyth1993@gmail.com",
   password: "123456",
   password_confirmation: "123456",
@@ -27,8 +27,21 @@ end
 
 categories = Category.order(:created_at).take(5)
 
-categories.each do |category| 
-  100.times do |n|
+categories.each do |category|
+  100.times do |_|
     category.words.create! content: Faker::Lorem.word
   end
+end
+
+words = Word.take(5)
+
+words.each do |word|
+  4.times do |n|
+    n == 0 ? is_true = 1 : is_true = 0
+    word.answers.create!(content: Faker::Lorem.word, correct: is_true)
+  end
+end
+
+categories.each do |category|
+  user.lessons.create! category_id: category.id
 end
