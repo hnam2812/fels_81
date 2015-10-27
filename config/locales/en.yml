@@ -18,7 +18,15 @@ en:
   following: "following"
   follower: "followers"
   view_profile: "view my profile"
-  login_require: "Please log in."
+  login_require: "Please login first!"
+  create_lesson_complete: "Create lesson successful!"
+  create_lesson_fail: "Create lesson fail!"
+  start: "Start!"
+  submit: "Submit!"
+  category_name: "Category"
+  has: "has"
+  words: "words"
+  category_learned: "You've finished this category "
   layouts:
     header:
       website: "Framgia eLearning"

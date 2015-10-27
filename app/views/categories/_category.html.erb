@@ -11,6 +11,13 @@
       </h4>
     </div>
     <div class="panel-body">
+      <%= category.name %>
+      <% if logged_in? %>
+        <%= form_for @lesson do |f| %>
+          <%= f.hidden_field :category_id, value: category.id %>
+          <%= f.submit t("start"), class: "btn btn-primary" %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

@@ -1,0 +1,16 @@
+<h1><%= t "lesson" %></h1>
+<p>
+  <%= t "category_name" %>:
+  <%= link_to @lesson.category.name, @lesson.category %>
+  <%= t "has" %>: <%= pluralize @lesson.words.count, t("category.index.word") %>
+</p>
+<%= form_for @lesson do |f| %>
+  <%= f.fields_for :results do |result| %>
+    <%= render "word_form", f: result %>
+  <% end %>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-5">
+      <%= f.submit t("submit"), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
