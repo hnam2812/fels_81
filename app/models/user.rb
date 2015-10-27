@@ -57,6 +57,10 @@ class User < ActiveRecord::Base
     following.include? other_user
   end
 
+  def load_activities
+    Activity.show_activities self.id
+  end
+
   private
   def create_activation_digest
     self.activation_token  = User.new_token

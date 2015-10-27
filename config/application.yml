@@ -9,8 +9,14 @@ defaults: &defaults
   pagination:
     categories_per_page: 10
     words_per_page: 120
+    activities_per_page: 15
   lesson:
     words_per_lesson: 5
+  activity:
+    follow: "follow"
+    unfollow: "unfollow"
+    learned: "learned"
+    learning: "learning"
 development:
   <<: *defaults
 
