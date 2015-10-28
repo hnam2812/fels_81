@@ -1,0 +1,21 @@
+<%= t "member" %>: <%= link_to @lesson.user.name, @lesson.user %>,
+<%= t "lesson" %>: <%= link_to @lesson.id, @lesson  %>
+<p>
+  <% @lesson.results.each do |result| %>
+  <li>
+    <%= t "result_word"  %>: <%= result.word.content %>,
+    <%= result.answer.nil? ? t("not_select_answer") :
+      "#{t("your_answer")} #{result.answer.content}" %>
+    <br>
+    <% if !result.answer.nil? && result.answer.correct %>
+      <div style="color:green">
+        <%= t("correct_answer") %>
+      </div>
+    <% else %>
+      <div style="color:red">
+        <%= t("wrong_answer") %>
+      </div>
+    <% end %>
+  </li>
+  <% end %>
+</p>
