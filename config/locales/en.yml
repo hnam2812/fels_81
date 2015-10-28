@@ -92,3 +92,18 @@ en:
       learned: "Learned"
       not_learn: "Not learn"
       all_words: "All word"
+  admin:
+    dashboard:
+      home:
+        title: "Dashboard"
+        welcome: "Welcome admin"
+    word:
+      add_title: "Add new word"
+      btn_add: "Save changes"
+      answer: "Answer"
+      correct: "Correct Choice"
+      btn_new_answer: "New answer"
+      btn_remove: "Remove"
+      add:
+        success: "Add word successfully!"
+        fail: "Add word fail!"

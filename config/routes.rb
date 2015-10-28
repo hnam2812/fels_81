@@ -4,9 +4,15 @@ Rails.application.routes.draw do
   get "login" => "sessions#new"
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
+
+  namespace :admin do
+    root "dashboard#home"
+    resources :words
+  end
+
   resources :categories
   resources :lessons
-  resources :words
+  resources :words, only: [:index]
   resources :users do
     resources :relationships,  only: [:index]
   end
