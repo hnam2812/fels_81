@@ -5,8 +5,9 @@
       <h4>
         <b><%= link_to category.name, category %></b>
         <small>
-          <%= t "category.index.word_learned_title" %>
-          <%= pluralize category.words.learned(current_user.id).count, t("category.index.word") %>
+          (<%= t "category.index.word_learned_title" %>
+          <%= category.words.learned(current_user.id).count %>/
+          <%= pluralize category.words.count, t("category.index.word") %>)
         </small>
       </h4>
     </div>
