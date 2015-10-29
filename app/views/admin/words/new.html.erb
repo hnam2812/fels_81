@@ -1,0 +1,30 @@
+<% provide :title, t("admin.word.add_title") %>
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+    <h1><%= t "admin.word.add_title" %></h1>
+    <%= form_for @word, url: admin_words_path do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <%= select_tag :category_id,
+        options_from_collection_for_select(@categories, :id, :name,
+        params[:category_id]), class: "form-control" %>
+      <%= f.label :content %>
+      <%= f.text_field :content, class: "form-control" %>
+      <div id="answers">
+        <%= f.fields_for :answers do |answer| %>
+          <div class="single_answer">
+            <%= render "answer_form", f: answer %>
+          </div>
+        <% end %>
+      </div>
+
+      <div>
+        <%= add_child_button t("admin.word.btn_new_answer"), :answers,
+          "#answers" %>
+        <%= new_fields_template f, :answers %>
+      </div>
+
+      <%= f.submit t("admin.word.btn_add"), class: "btn btn-primary",
+        id: "btn_word" %>
+    <% end %>
+  </div>
+</div>

@@ -347,6 +347,29 @@ div.homepage {
 }
 
 /* Word */
-input[type=radio].radio_word {
+input.radio_word, .checkbox_answer {
   width: inherit;
+}
+
+.remove_fields {
+  color: red;
+  cursor:pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.correct_answer {
+  color: green;
+  cursor:pointer;
+}
+
+.add_child {
+  cursor:pointer;
+  color: blue;
+  font-weight: bold;
+  font-size: 1.6em;
+  &:hover {
+    text-decoration: underline;
+  }
 }

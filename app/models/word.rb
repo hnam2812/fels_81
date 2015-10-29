@@ -3,8 +3,13 @@ class Word < ActiveRecord::Base
 
   has_many :lesson, through: :results
   has_many :results
-  has_many :answers
+  has_many :answers, dependent: :destroy
   has_many :user_word
+
+  validates :content, presence: true
+
+  accepts_nested_attributes_for :answers, allow_destroy: true,
+    reject_if: proc{|ans| ans["content"].blank?}
 
   scope :all_words, -> user_id{}
   scope :learned, -> user_id{where "id in (select word_id from results where
