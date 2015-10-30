@@ -1,5 +1,7 @@
 class Admin::WordsController < ApplicationController
+  before_action :require_login, :admin_user
   before_action :load_categories, only: [:new, :create]
+
   def new
     @word = Word.new
     Settings.word.answers_per_word.times{@word.answers.new}
