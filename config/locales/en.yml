@@ -39,6 +39,8 @@ en:
   your_correct_answer: "Your correct answer"
   ago: "ago"
   created: "created "
+  in: "in"
+  from: "from"
   layouts:
     header:
       website: "Framgia eLearning"
@@ -57,14 +59,15 @@ en:
       team: "Team 3"
   static_pages:
     home:
+      activity: "activity"
       welcome: "Welcome"
       sign_up: "Sign up"
       promotion: "Please login to learn and follow my account."
       create_account_free: "to create account for free!"
       or: "Or"
       btn:
-        lesson: "Lessons"
-        word: "Words"
+        lesson: "New Lessons"
+        word: "All Words"
   project: "Framgia E-learning System"
   users:
     edit:
@@ -131,3 +134,8 @@ en:
         btn: "Edit"
         success: "Update category successfully!"
         fail: "Update category fail!"
+  activity:
+    follow: "followed"
+    unfollow: "unfollow"
+    learned: "learned"
+    learning: "learning"

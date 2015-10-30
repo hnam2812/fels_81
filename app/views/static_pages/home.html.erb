@@ -8,12 +8,27 @@
           <%= current_user.name.upcase %>
         </h1>
       </section>
+      <section class="stats">
+        <%= render "shared/stats" %>
+      </section>
     </aside>
     <div class="btn-group btn-group-justified" role="group" saria-label="">
       <%= link_to t("static_pages.home.btn.word"), words_path,
         class: "btn btn-danger" %>
       <%= link_to t("static_pages.home.btn.lesson"), categories_path,
         class: "btn btn-success" %>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="panel panel-info">
+      <div class="panel-heading"> <h4 class="text-center"> <%= link_to current_user.name,current_user %>
+        <%= t "static_pages.home.activity" %> </h4>
+      </div>
+      <div class="panel-body">
+        <%= render @activities if @activities.any? %>
+        <%= will_paginate @activities %>
+      </div>
     </div>
   </div>
 <% else %>
