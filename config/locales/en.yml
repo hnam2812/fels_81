@@ -37,6 +37,8 @@ en:
   lesson: "Lesson"
   learned_lesson: "Learned Lesson"
   your_correct_answer: "Your correct answer"
+  ago: "ago"
+  created: "created "
   layouts:
     header:
       website: "Framgia eLearning"
@@ -110,3 +112,22 @@ en:
       add:
         success: "Add word successfully!"
         fail: "Add word fail!"
+    category:
+      title: "Category management"
+      has: "has: "
+      word: "word"
+      add:
+        btn: "Add new"
+        title: "ADD NEW CATEGORY"
+        success: "Add category successfully!"
+        fail: "Add category fail!"
+        new_word: "Add words for this category"
+      delete:
+        btn: "Delete"
+        success: "Delete category successfully!"
+        fail: "Delete category fail!"
+        confirm: "Are you sure?"
+      update:
+        btn: "Edit"
+        success: "Update category successfully!"
+        fail: "Update category fail!"
