@@ -1,8 +1,8 @@
 class Admin::UsersController < ApplicationController
-  before_action :require_login, :admin_user
+  before_action :require_login, :admin_user, :find_user, only: :destroy
 
   def destroy
-    if User.find(params[:id]).destroy
+    if @user.destroy
       flash[:success] = t "flash.user.delete.success"
     else
       flash[:warning] = t "flash.user.delete.fail"
