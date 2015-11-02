@@ -1,0 +1,27 @@
+<% provide :title, t("layouts.header.statictics") %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info entry_form">
+        <h1>
+          <%= gravatar_for current_user %>
+          <%= current_user.name.upcase %>
+        </h1>
+      </section>
+      <section class="stats">
+        <%= render "shared/stats" %>
+      </section>
+    </aside>
+  </div>
+  <div class="row">
+    <div class="panel panel-info">
+      <div class="panel-heading"> <h4 class="text-center">
+      <%= link_to current_user.name, current_user %>
+        <%= t "static_pages.home.statictics" %> </h4>
+      </div>
+      <div class="panel-body">
+        <%= render "shared/user_statictic" %>
+      </div>
+    </div>
+  </div>
+<% end %>

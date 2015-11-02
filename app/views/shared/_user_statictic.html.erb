@@ -1,0 +1,22 @@
+<p> <%= t "total_answers" %> <%= total_answers %> </p>
+<p> <%= t "total_correct_answers" %> <%= total_correct_answers %>
+<%= percent_correct_answer %>
+</p>
+<p>
+  <%= t "learn_progress" %>
+  <div class="col-md-6">
+    <div class="progress">
+      <div class="progress-bar progress-bar-success
+        progress-bar progress-bar-striped active" role="progressbar"
+        aria-valuenow="" aria-valuemin="0" aria-valuemax="100"
+        style="width:<%= learned_progress %>%">
+      <%= learned_progress %>%
+      </div>
+      <div class="progress-bar progress-bar-danger
+        progress-bar progress-bar-striped active" role="progressbar"
+        style="width:<%= unlearn_progress %>%">
+      <%= unlearn_progress %>%
+      </div>
+    </div>
+  </div>
+</p>
