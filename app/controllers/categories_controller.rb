@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :require_login, :find_category
+
   def index
     @categories = Category.paginate page: params[:page],
       per_page: Settings.pagination.categories_per_page
@@ -6,6 +8,5 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find params[:id]
   end
 end

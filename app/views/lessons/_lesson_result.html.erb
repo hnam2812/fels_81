@@ -8,7 +8,7 @@
   <li>
     <%= t "result_word"  %>: <%= result.word.content %>,
     <%= result.answer.nil? ? t("not_select_answer") :
-      "#{t("your_answer")} #{result.answer.content}" %>
+      "#{t("your_answer")}: #{result.answer.content}" %>
     <br>
     <% if !result.answer.nil? && result.answer.correct %>
       <div style="color:green">

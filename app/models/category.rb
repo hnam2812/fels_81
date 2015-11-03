@@ -3,4 +3,14 @@ class Category < ActiveRecord::Base
   has_many :lessons
 
   validates :name, presence: true
+  before_save :create_slug
+
+  def to_param
+    slug
+  end
+
+  private
+  def create_slug
+    self.slug = self.name.gsub(" ", "-")
+  end
 end

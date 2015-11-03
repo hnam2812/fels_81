@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   attr_accessor :remember_token
   has_many :activities, dependent: :destroy
@@ -11,7 +12,7 @@ class User < ActiveRecord::Base
   has_many :followers, through: :passive_relationships, source: :follower
   has_many :user_word, dependent: :destroy
 
-  before_save   :downcase_email
+  before_save   :downcase_email, :create_slug
 
   validates :name, presence: true, length: {maximum: 50}
   validates :email, presence: true, length: {maximum: 255},
@@ -61,6 +62,10 @@ class User < ActiveRecord::Base
     Activity.show_activities self.id
   end
 
+  def to_param
+    slug
+  end
+
   private
   def create_activation_digest
     self.activation_token  = User.new_token
@@ -69,5 +74,9 @@ class User < ActiveRecord::Base
 
   def downcase_email
       self.email = email.downcase
+  end
+
+  def create_slug
+    self.slug = self.name.gsub(/(\.)+/, "").gsub(" ", "-")
   end
 end
