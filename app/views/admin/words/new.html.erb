@@ -1,6 +1,7 @@
 <% provide :title, t("admin.word.add_title") %>
 <div class="row">
-  <div class="col-md-offset-3 col-md-6">
+  <%= render "layouts/sidebar" %>
+  <div class="col-md-offset-3 col-md-7">
     <h1><%= t "admin.word.add_title" %></h1>
     <%= form_for @word, url: admin_words_path do |f| %>
       <%= render "shared/error_messages", object: f.object %>

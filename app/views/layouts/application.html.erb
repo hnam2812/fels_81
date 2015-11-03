@@ -4,7 +4,7 @@
     <title><%= yield :title %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track": true %>
-    <%= javascript_include_tag "application", 
+    <%= javascript_include_tag "application",
                                             "data-turbolinks-track": true %>
     <%= csrf_meta_tags %>
     <%= render "layouts/shim" %>
@@ -12,9 +12,13 @@
   <body>
     <%= render "layouts/header" %>
     <div class="container">
-      <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
+      <div class="row">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %> col-md-offset-3 col-md-6">
+            <%= message %>
+          </div>
+        <% end %>
+      </div>
       <%= yield %>
       <%= render "layouts/footer" %>
     </div>

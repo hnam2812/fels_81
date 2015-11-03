@@ -1,0 +1,22 @@
+<div class="col-sm-3 col-md-2 sidebar">
+  <ul class="nav nav-sidebar">
+    <li>
+      <span><%= link_to t("admin.dashboard.home.title"), admin_root_path %></span>
+    </li>
+  </ul>
+
+  <ul class="nav nav-sidebar">
+    <li>
+      <span><%= link_to t("admin.category.title"), admin_root_path %></span>
+      <%= link_to t("admin.category.add_title"), new_admin_category_path %>
+      <%= link_to t("admin.category.all_title"), admin_categories_path %>
+    </li>
+  </ul>
+
+  <ul class="nav nav-sidebar">
+    <li>
+      <span><%= link_to t("admin.word.title"), admin_root_path %></span>
+      <%= link_to t("admin.word.add_title"), new_admin_word_path %>
+    </li>
+  </ul>
+</div>

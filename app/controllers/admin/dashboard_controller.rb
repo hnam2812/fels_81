@@ -1,5 +1,6 @@
 class Admin::DashboardController < ApplicationController
-  def home
+  before_action :require_login, :admin_user
 
+  def home
   end
 end
