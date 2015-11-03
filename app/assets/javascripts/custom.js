@@ -1,5 +1,5 @@
 $(function(){
-  $(".checkbox_answer").click(function(){
+  $(document).on("click", ".checkbox_answer", function(){
     checkbox = this;
     if (checkbox.checked){
       $("input.checkbox_answer").each(function(){

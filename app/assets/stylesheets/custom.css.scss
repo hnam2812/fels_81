@@ -377,3 +377,53 @@ input.radio_word, .checkbox_answer {
 .h2_title {
   font-size: 2.6em;
 }
+
+/* Admin */
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  border-right: 1px solid #eee;
+
+  .nav-sidebar {
+    margin-right: -21px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+    li > a, li > span > a {
+      padding-right: 20px;
+      padding-left: 20px;
+      text-decoration: none;
+
+      &:hover {
+        color: #fff;
+        background-color: #428bca;
+      }
+    }
+  }
+
+  .nav>li {
+    position: relative;
+    display: block;
+    a {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+    }
+
+    span {
+      font-weight: bold;
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+      }
+    }
+  }
+}

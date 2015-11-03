@@ -3,6 +3,10 @@
     <%= link_to t(".title"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to t(".dashboard"),
+            admin_root_path if logged_in? && current_user.admin? %>
+        </li>
         <li><%= link_to t(".home"), root_path %></li>
         <li><%= link_to t(".help"), help_path %></li>
         <li><%= link_to t(".all_users"), users_path %></li>

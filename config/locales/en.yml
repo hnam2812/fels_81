@@ -48,6 +48,7 @@ en:
   layouts:
     header:
       website: "Framgia eLearning"
+      dashboard: "Dashboard"
       home: "Home"
       help: "Help"
       statictics: "Statictics"
@@ -112,6 +113,7 @@ en:
         title: "Dashboard"
         welcome: "Welcome admin"
     word:
+      title: "Word management"
       add_title: "Add new word"
       btn_add: "Save changes"
       answer: "Answer"
@@ -121,10 +123,17 @@ en:
       add:
         success: "Add word successfully!"
         fail: "Add word fail!"
+      delete:
+        confirm: "Are you sure?"
+        display: "Delete"
+        success: "Delete word successfully!"
+        fail!: "Delete word fail!"
     category:
       title: "Category management"
       has: "has: "
       word: "word"
+      add_title: "Add new category"
+      all_title: "All categories"
       add:
         btn: "Add new"
         title: "ADD NEW CATEGORY"
