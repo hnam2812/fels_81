@@ -4,7 +4,7 @@ $(function(){
     if (checkbox.checked){
       $("input.checkbox_answer").each(function(){
         if (checkbox != this) {
-          $(this).prop("checked",false);
+          $(this).prop("checked", false);
         }
       });
     }
@@ -20,6 +20,9 @@ $(function(){
         }
       }
     });
+    if (!flag) {
+      alert($("span.alert_true_answer").text());
+    }
     return flag;
   });
 

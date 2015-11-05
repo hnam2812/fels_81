@@ -45,6 +45,7 @@ en:
   total_correct_answers: "Your correct answer:"
   percent_correct_answer: "(with %{number}% correct)"
   learn_progress: "Complete percent:"
+  category_has_no_word: "There isn't any word in this category"
   layouts:
     header:
       website: "Framgia eLearning"
@@ -113,6 +114,8 @@ en:
         title: "Dashboard"
         welcome: "Welcome admin"
     word:
+      true_answer: You have to define at least 1 true answer
+      all_title: "All words"
       title: "Word management"
       add_title: "Add new word"
       btn_add: "Save changes"
@@ -127,13 +130,15 @@ en:
         confirm: "Are you sure?"
         display: "Delete"
         success: "Delete word successfully!"
-        fail!: "Delete word fail!"
+        fail: "Delete word fail!"
     category:
       title: "Category management"
       has: "has: "
       word: "word"
       add_title: "Add new category"
       all_title: "All categories"
+      add_word:
+        btn: "Add new word"
       add:
         btn: "Add new"
         title: "ADD NEW CATEGORY"
