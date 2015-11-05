@@ -1,7 +1,3 @@
 <div class="col-md-2">
   <%= word.content %>
-  <% if logged_in? && current_user.admin? %>
-    <%= link_to t("admin.word.delete.display"), admin_word_path(word),
-      method: :delete, data: {confirm: t("admin.word.delete.confirm")} %>
-  <% end %>
 </div>

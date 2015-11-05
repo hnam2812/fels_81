@@ -1,16 +1,18 @@
 <div class="col-md-offset-3 col-md-7 panel panel-default">
   <div class="panel-body">
-    <h3><%= category.name %></h3>
+    <h3><%= link_to category.name, admin_category_path(category) %></h3>
     <p>
       <%= t "created" %><%= time_ago_in_words category.created_at %>
       <%= t "ago" %> |
       <span class="text-info">
         <%= t "admin.category.has" %>
         <%= link_to pluralize(category.words.size, t("admin.category.word")),
-          words_path(category: category.id) %>
+          admin_category_path(category) %>
       </span> |
+      <%= link_to t("admin.category.add_word.btn"),
+        new_admin_word_path(category_id: category.id), class: "text-success" %> |
       <%= link_to t("admin.category.update.btn"),
-        edit_admin_category_path(category), class: "text-success" %> |
+        edit_admin_category_path(category), class: "text-warning" %> |
       <%= link_to t("admin.category.delete.btn"), admin_category_path(category),
         method: :delete, data: {confirm: t("admin.category.delete.confirm")},
         class: "text-danger" %>

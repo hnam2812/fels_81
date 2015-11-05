@@ -1,0 +1,9 @@
+<% provide :title, t("word_list_title") %>
+<div class="row">
+  <%= render "layouts/sidebar" %>
+  <div class="col-md-offset-3 col-md-9">
+    <h1><%= t "admin.word.all_title" %></h1>
+    <%= render @words %>
+    <%= will_paginate %>
+  </div>
+</div>

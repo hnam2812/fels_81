@@ -11,6 +11,7 @@ class Lesson < ActiveRecord::Base
   before_create :init_words
   after_create :create_learning_activity
   before_update :create_learned_activity
+  before_destroy :destroy_lesson
 
   def words_correct
     correct = self.results.select{|item| !item.answer.nil? && item.answer.correct}.size
@@ -30,5 +31,10 @@ class Lesson < ActiveRecord::Base
 
   def create_learned_activity
     create_activity :learned, self.user.id, self.id
+  end
+
+  def destroy_lesson
+    destroy_activity self.id, :learned
+    destroy_activity self.id, :learning
   end
 end

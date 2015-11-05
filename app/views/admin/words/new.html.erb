@@ -5,7 +5,8 @@
     <h1><%= t "admin.word.add_title" %></h1>
     <%= form_for @word, url: admin_words_path do |f| %>
       <%= render "shared/error_messages", object: f.object %>
-      <%= select_tag :category_id,
+      <%= f.label :category %>
+      <%= f.select :category_id,
         options_from_collection_for_select(@categories, :id, :name,
         params[:category_id]), class: "form-control" %>
       <%= f.label :content %>

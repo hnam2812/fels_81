@@ -11,7 +11,7 @@ module ApplicationHelper
   end
 
   def add_child_button name, association, target
-    content_tag(:spam, "<span>#{name}</span>".html_safe, class: "add_child",
-      "data-association"=> association, target: target)
+    content_tag(:spam, "<span class='btn btn-success'>#{name}</span>".html_safe,
+      class: "add_child", "data-association"=> association, target: target)
   end
 end
